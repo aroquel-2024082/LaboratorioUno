@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+/* Encabezado */
+
+.contenedor-encabezado {
+    background-color: #f8fafc;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.contenedor-encabezado ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.contenedor-encabezado ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contenedor-encabezado ul li a:hover {
+    color: rgba(168, 52, 17, 1);
+}
+
+/* Primera seccion carrusel con fotos */
+
+.kinal {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letras-kinal {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    min-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.letras-kinal img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.carrusel-kinal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.carrusel {
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel ul {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    list-style: none;
+    animation: carrusel 15s infinite alternate ease-in-out;
+}
+
+.carrusel li {
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+@keyframes carrusel {
+    0%,15% {margin-left: 0%;}
+
+    20%,35% {margin-left: -100%;}
+
+    40%,55% {margin-left: -200%;}
+
+    60%,75% {margin-left: -300%;}
+
+    80%,100% {margin-left: -400%;}
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Segunda seccion */
+
+.oportuniades {
+    padding: 60px 10%;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.becas, .trabajo, .religion, .apoyo {
+    display: flex;
+    flex-direction: row; 
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.becas, .religion {
+    background-color: #1a2b4c;
+    color: white;
+}
+
+.trabajo, .apoyo {
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+.becas-img, .trabajo-imb, .religion-img, .apoyo-img {
+    flex: 1;
+    max-width: 40%;
+}
+
+.becas-img img, .trabajo-imb img, .religion-img img, .apoyo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.becas-text, .trabajo-text, .religion-text, .apoyo-text {
+    flex: 1.5;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.oportuniades h1 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.becas-text h1, .religion-text h1 { 
+    color: #ffc20e; 
+} 
+
+.trabajo-text h1 { 
+    color: #f37021; 
+}
+
+.apoyo-text h1 { 
+    color: #4a773c; 
+} 
+
+.oportuniades p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.oportuniades button {
+    width: fit-content;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f37021;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.oportuniades button:hover {
+    background-color: #1e293b; 
+}
+
+.trabajo button, .apoyo button {
+    background-color: #1a2b4c;
+}
+
+.trabajo button:hover, .apoyo button:hover {
+    background-color: #f37021;
+}
+
+/* Tercera seccion */
+
+.estudios {
+    padding: 80px 2%;
+    background-color: #f1f5f9;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.estudios h1 {
+    font-size: 2.5rem;
+    color: #1a2b4c;
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.estudios h1::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 5px;
+    background: #f37021;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+.estudios-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap; 
+}
+
+[class^="card-"] {
+    position: relative;
+    width: 230px;
+    height: 380px;
+    perspective: 1000px;
+}
+
+.enfrente, .atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(26, 43, 76, 0.2);
+    overflow: hidden;
+}
+
+.enfrente {
+    transform: rotateY(0deg);
+    background-color: #1a2b4c;
+    display: flex;
+    flex-direction: column;
+}
+
+.enfrente img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-bottom: 4px solid #f37021;
+}
+
+.enfrente h3 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #fff;
+    background: #1a2b4c;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.atras {
+    background-color: #1a2b4c;
+    transform: rotateY(180deg);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 8px solid white; 
+}
+
+.atras h3 {
+    font-size: 1.1rem;
+    color: #ffc20e;
+    margin-bottom: 10px;
+}
+
+.atras p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #e2e8f0;
+}
+
+.atras .detalles {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+.atras .detalles a {
+    color: #f37021;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.atras .detalles a:hover {
+    color: #ffc20e;
+}
+
+.card-basico .atras { 
+    border-color: #f37021; 
+} 
+
+.card-diversificado .atras { 
+    border-color: #ffc20e; 
+}
+
+.card-tecnica .atras { 
+    border-color: #4a773c; 
+} 
+
+.card-negocio .atras { 
+    border-color: #00a8e8; 
+}
+
+.card-universitario .atras { 
+    border-color: #ffffff; 
+}
+
+[class^="card-"]:hover .enfrente { transform: rotateY(-180deg); }
+[class^="card-"]:hover .atras { transform: rotateY(0deg); }
+
+/* Cuarta seccion */
+
+.noticias {
+    padding: 100px 8%;
+    background-color: #1a2b4c;
+    background-image: radial-gradient(circle at top right, #2c3e50, #1a2b4c); /* Sutil degradado para dar calidad */
+    text-align: center;
+    color: white;
+}
+
+.beneficios h1 {
+    font-size: 2.8rem;
+    font-weight: 850;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.beneficios p {
+    font-size: 1.2rem;
+    color: #ffc20e;
+    font-weight: 500;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    text-transform: italic;
+}
+
+.beneficios-unidad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.beneficios-unidad > div {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 20px;
+    border-radius: 15px;
+    border-top: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tecnica { 
+    border-color: #f37021 !important; 
+}
+
+.basico { 
+    border-color: #ffc20e !important; 
+}
+
+.diversificado { 
+    border-color: #4a773c !important; 
+}
+
+.total { 
+    background: rgba(243, 112, 33, 0.1) !important;
+    border-color: #f37021 !important; 
+}
+
+.beneficios-unidad > div:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.beneficios-unidad h1 {
+    font-size: 3.8rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.tecnica h1 { 
+    color: #f37021; 
+}
+
+.basico h1 { 
+    color: #ffc20e; 
+}
+
+.total h1 { 
+    color: #ffc20e; 
+}
+
+.beneficios-unidad p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Quina seccion */
+
+.contactos {
+    padding: 60px 8%;
+    background-color: #1a2b4c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-top: 5px solid #f37021;
+}
+
+.contacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto h1 {
+    font-size: 1.5rem;
+    color: #ffc20e;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contacto a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contacto a:hover {
+    color: #f37021;
+    padding-left: 5px;
+}
+
+.info-img {
+    flex: 1;
+    text-align: center;
+}
+
+.info-img img {
+    width: 200px;
+    filter: brightness(0) invert(1);
+}
+
+.direccion {
+    flex: 1;
+    text-align: right;
+}
+
+.direccion p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+/* Sexta Seccion */
+
+.explicacion {
+    padding: 200px 15%;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                url('../img/kinalletras.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+}
+
+.explicacion-text {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(26, 43, 76, 0.1);
+    border-left: 10px solid #721c24;
+}
+
+.explicacion-text h1 {
+    font-size: 2.2rem;
+    color: #1a2b4c;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.explicacion-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #475569;
+    text-align: justify;
+    position: relative;
+}
+
+.explicacion-text p::before {
+    font-size: 5rem;
+    color: rgba(243, 112, 33, 0.2);
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    font-family: serif;
+}
+
+/* Menu hamburguesa */
+
+#menu, .menu-hamburguesa {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .contenedor-encabezado {
+        padding: 15px 0;
+        flex-direction: column;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        font-size: 40px; 
+        color: #1a2b4c;
+        cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease;
+        text-align: center;
+        width: 100%; 
+    }
+
+    .menu-hamburguesa:hover {
+        color: #f37021;
+        transform: scale(1.1);
+    }
+
+    .contenedor-encabezado ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #f8fafc;
+        padding: 20px 0;
+        gap: 15px;
+        text-align: center;
+        border-top: 1px solid #e2e8f0;
+        margin-top: 10px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+
+    #menu:checked ~ ul {
+        display: flex; 
+        animation: slideDown 0.4s ease-out;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contenedor-encabezado ul li {
+        width: 100%;
+    }
+
+    .contenedor-encabezado ul li a {
+        display: block;
+        padding: 10px 0;
+        font-size: 20px;
+        width: 100%;
+    }
+    
+    .kinal { height: 50vh; }
+    .letras-kinal { width: 95%; min-width: unset; }
+
+    .oportuniades {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+    }
+    .becas, .trabajo, .religion, .apoyo {
+        flex-direction: column;
+        height: auto;
+    }
+    .becas-img, .trabajo-imb, .religion-img, .apoyo-img {
+        max-width: 100%;
+        height: 180px;
+    }
+
+    .estudios-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    [class^="card-"] {
+        width: 280px;
+    }
+
+    .beneficios-unidad {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .contactos {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+    .direccion p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .beneficios-unidad {
+        grid-template-columns: 1fr;
+    }
+    .beneficios-unidad h1 {
+        font-size: 2.8rem;
+    }
+    .explicacion-text {
+        padding: 25px 15px;
+    }
+}

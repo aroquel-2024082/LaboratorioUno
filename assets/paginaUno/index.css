@@ -322,11 +322,18 @@ hacer responsive la pagina */
         color: #333;
         cursor: pointer;
         padding-right: 20px;
+        text-align: center;
+    }
+
+    .menu-hamburguesa:hover {
+        color: #4a773c; 
+        transform: scale(1.1);
     }
 
     .contenedor-encabezado {
         justify-content: flex-end;
         padding: 10px 0;
+        align-items: center;
     }
 
     .contenedor-encabezado ul {

@@ -369,9 +369,14 @@ body {
     .menu-hamburguesa {
         display: block;
         padding: 20px;
-        font-size: 30px;
+        font-size: 35px;
         cursor: pointer;
-        text-align: right;
+        text-align: center;
+    }
+
+    .menu-hamburguesa:hover {
+        color: #1a2b4c;
+        transform: scale(1.1);
     }
 
     .contenedor-encabezado ul {
